@@ -25,6 +25,10 @@
     "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "unplugin-vue-components": "^0.22.9",
     "vite": "^3.1.8",
     "vitest": "^0.24.3"
