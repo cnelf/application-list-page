@@ -1,5 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>应用列表页</div>
+  <div class="page">应用列表</div>
 </template>
+
+<style lang="scss"></style>
