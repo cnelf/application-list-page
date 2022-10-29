@@ -1,7 +1,6 @@
 import axios from 'axios';
 import qs from 'qs';
-import { Dialog } from 'vant';
-import 'vant/es/dialog/style';
+import { alert } from './prompt';
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
@@ -17,7 +16,11 @@ service.interceptors.request.use(
 
 service.interceptors.response.use(
   (response) => {
-    return response;
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return Promise.reject(response);
+    }
   },
   (error) => {
     httpErrorStatusHandler(error);
@@ -80,10 +83,10 @@ function httpErrorStatusHandler(error) {
   if (error.message.includes('timeout')) message = '网络请求超时！';
   if (error.message.includes('Network')) message = window.navigator.onLine ? '服务端异常！' : '您断网了！';
   error.message = message;
-  Dialog({ message });
+  alert(message);
 }
 
-function request(config) {
+export function request(config) {
   config.method = config.method || 'get';
   if (config.method.toLowerCase() === 'get') {
     config.params = config.data;
@@ -101,5 +104,3 @@ function request(config) {
     return request({ url, method: type, ...options });
   };
 });
-
-export default request;
