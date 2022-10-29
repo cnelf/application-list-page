@@ -1,0 +1,13 @@
+@import './mixins.scss';
+
+.text-ellipsis {
+  @include text-ellipsis(1);
+}
+
+body {
+  font-size: 14px;
+}
+
+img {
+  vertical-align: top;
+}
