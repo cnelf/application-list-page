@@ -1,16 +1,17 @@
 # application-list-page
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a test project for show itunes store app list
 
-## Recommended IDE Setup
+[Preview Url](https://application-list-page-hk8nfwkgj-cnelf.vercel.app/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Feature
 
-## Customize configuration
+- Use viewport layout to support responsive
+- Use vite-plugin-pwa to support PWA (Progressive Web App)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Start the project
 
-## Project Setup
+### Install project dependency
 
 ```sh
 npm install
@@ -22,20 +23,14 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Preview through the browser
 
 ```sh
-npm run build
+http://localhost:8088
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
 npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
